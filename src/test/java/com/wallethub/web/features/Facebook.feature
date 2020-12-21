@@ -1,3 +1,6 @@
+#This feature file is for the facebook login.
+#Please add username password in the properties files
+
 Feature: Facebook login
 
   @Web

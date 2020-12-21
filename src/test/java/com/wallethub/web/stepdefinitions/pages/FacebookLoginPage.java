@@ -58,7 +58,7 @@ public class FacebookLoginPage extends Base {
 
 
 
-    public void login() throws InterruptedException {
+    public void login()  {
         PageFactory.initElements(webDriverFactory.getWebDriver(), this);
         webDriverFactory.getWebDriver().get(facebookUI);
         username.clear();
@@ -66,11 +66,14 @@ public class FacebookLoginPage extends Base {
         password.clear();
         password.sendKeys(facebookPassword);
         password.sendKeys(Keys.ENTER);
+    }
+
+    public void postMessage() throws InterruptedException{
         wallMainTextBox.click();
         WebDriverWait wait = new WebDriverWait (webDriverFactory.getWebDriver(), 20);
         wait.until(ExpectedConditions.elementToBeClickable(wallTextBox));
         wallTextBox.click();
-        wallTextBox.sendKeys("Hello World"+Math.random());
+        wallTextBox.sendKeys("Hello World");
         wallTextBoxPostButton.click();
         Thread.sleep(2000);
         wait.until(ExpectedConditions.elementToBeClickable(accountDropdownButton));

@@ -1,5 +1,7 @@
 package com.wallethub.web.stepdefinitions;
 
+import com.github.javafaker.service.FakeValuesService;
+import com.github.javafaker.service.RandomService;
 import com.wallethub.web.WebDriverFactory;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -10,6 +12,8 @@ import org.openqa.selenium.WebDriverException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.Locale;
 
 
 public class Hooks {

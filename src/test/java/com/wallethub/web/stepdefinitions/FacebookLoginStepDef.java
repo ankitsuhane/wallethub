@@ -17,6 +17,7 @@ public class FacebookLoginStepDef implements En {
         });
 
         Then("Post a status message {string} and logout", (String string) -> {
+            facebookLoginPage.postMessage();
         });
     }
 }
